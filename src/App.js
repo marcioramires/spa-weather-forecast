@@ -7,20 +7,26 @@ function App() {
   const [weatherImg, setWeatherImg] = useState()
   const [maxTemperature, setMaxTemperature] = useState()
   const [minTemperature, setMinTemperature] = useState()
+  const [searchDate, setSearchDate] = useState()
   const [sunriseDate, setSunriseDate] = useState()
+  const [sunsetDate, setSunsetDate] = useState()
   const inputCity = useRef()
 
   async function weatherSearch() {
     const city = inputCity.current.value
 
     const weatherRequest = await axios.post(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=8&lang=pt_br&units=metric&APPID=66df7171bb94888f0408af69c132b4ab`)
-    
+
     const weatherData = weatherRequest.data
     const img = `http://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}@2x.png`
 
     setWeatherForecast(weatherData)
     setWeatherImg(img)
-    
+
+    setSearchDate(requestDate(weatherData.list[0].dt))
+    setSunriseDate(localTime(weatherData.city.sunrise))
+    setSunsetDate(localTime(weatherData.city.sunset))
+
     const maxTemp = Math.max(
       weatherData.list[0].main.temp_max,
       weatherData.list[1].main.temp_max,
@@ -45,19 +51,23 @@ function App() {
 
     setMaxTemperature(maxTemp)
     setMinTemperature(minTemp)
-
-    const tempo = weatherData.city.sunrise
-    const date = new Date(tempo);
-    const hour = date.getHours();
-    const minute = date.getMinutes();
-
-    const printDate = `${hour}h${minute}min`
-    
-    setSunriseDate(printDate)
   }
 
-  
-  
+  function localTime(data) {
+    const time = new Date(data * 1000)
+
+    const hour = time.getHours()
+    const minute = time.getMinutes()
+
+    return `${hour}h${minute}min`
+  }
+
+  function requestDate(data) {
+    const time = new Date(data * 1000).toLocaleDateString("pt-br")
+
+    return time
+  }
+
   return (
     <div className="App">
       <h1>Previsão do Tempo</h1>
@@ -71,7 +81,7 @@ function App() {
           <ul>
             <li>{weatherForecast.city.name}, {weatherForecast.city.country}</li>
             <li>.</li>
-            <li>Data atual completa</li>
+            <li>{searchDate}</li>
             <li>.</li>
             <li>Temperatura Atual: {weatherForecast.list[0].main.temp} ºC</li>
             <li>Sensação Térmica: {weatherForecast.list[0].main.feels_like} ºC</li>
@@ -85,7 +95,7 @@ function App() {
             <li>Temperatura Mínima para as próximas 24 horas: {minTemperature}ºC</li>
             <li>.</li>
             <li>Nascer do Sol: {sunriseDate}</li>
-            <li>Pôr do Sol</li>
+            <li>Pôr do Sol: {sunsetDate}</li>
           </ul>
         </div>
       ) : null}

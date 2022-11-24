@@ -52,6 +52,7 @@ function App() {
     const minute = date.getMinutes();
 
     const printDate = `${hour}h${minute}min`
+    
     setSunriseDate(printDate)
   }
 

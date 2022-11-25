@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Web App Para Previsão do Tempo - Aplicação Frontend com Consumo de API Rest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto desenvolvido em React JS, uma aplicação front-end que através de uma API Rest ([OpenWeatherMap](http://openweathermap.org/)) consulta a previsão do tempo para a cidade desejada.
+#
+![Screenshot 2022-11-25 164934](https://user-images.githubusercontent.com/113479357/204049531-b6d7fc5e-fd0a-4519-bbc5-d9280facfa8b.png)
+# 🚀 Tecnologias:
+ 
+Foram utilizadas com as seguintes tecnologias, ferramentas e bibliotecas:
 
-## Available Scripts
+- Javascript
+- React
+- JSX
+- Styled Components
+- Yarn
+- React-router-dom
+- Hook state
+- Hook ref
+- Axios
+#
+#
+# 💻 Funcionalidades:
 
-In the project directory, you can run:
+- Consulta em tempo real da previsão do tempo para a cidade desejada. Retornando:
 
-### `npm start`
+- Temperatura atual.
+- Data e cidade da consulta.
+- Condições do clima.
+- Temperatura máxima e mínima para o próximo dia.
+- Condições das nuvens.
+- Horário do nascer do sol e do por do sol.
+#
+#
+# 😎 Deploy:
+- [spa-weather-forecast](https://spa-weather-forecast-mrgt.netlify.app/).
+#
+#
+Esse projeto foi criado com  Create React App, para compilar e instalar esse projeto siga as instruções abaixo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Scripts Disponíveis
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+No diretório do projeto, você pode executar para instalar os pacotes de depencias:
 
-### `npm test`
+## `yarn`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+No diretório do projeto, você pode executar para instalar os pacotes de depencias:
 
-### `npm run build`
+## `yarn start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O aplitcativo iniciará no modo de desenvolvimento, no seu navegador, no endereço [http://localhost:3000](http://localhost:3000).
+Caso isso não ocorra, você pode abri-lo digitando diretamente no seu navegador.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A página será recarregada quando você salvar o arquivo após alguma alteração.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `yarn test`
 
-### `npm run eject`
+Inicia o executor de teste, você será guiado pelas opções disponíveis via terminal.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## `yarnd build`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Compila o aplicativo para produção na pasta `build`.\
+Ele agrupa corretamente os arquivos no modo de produção e otimiza a compilação para o melhor desempenho.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A compilação é reduzida e os nomes dos arquivos incluem os hashes.\
+Seu aplicativo está pronto para ser implantado!

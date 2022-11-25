@@ -33,7 +33,7 @@ function App() {
       });
 
     const weatherData = weatherRequest.data
-    const img = `http://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}@2x.png`
+    const img = `https://openweathermap.org/img/wn/${weatherData.list[0].weather[0].icon}@2x.png`
 
     setWeatherForecast(weatherData)
     setWeatherImg(img)

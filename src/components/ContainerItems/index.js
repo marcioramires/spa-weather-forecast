@@ -2,9 +2,9 @@ import React from "react";
 
 import { ContainerItems as Container } from './styles'
 
-function ContainerItems({children, isBlur}){
+function ContainerItems({children, ...props}){
 
-    return <Container isBlur={isBlur}>{children}</Container>
+    return <Container {...props}>{children}</Container>
 }
 
 export default ContainerItems

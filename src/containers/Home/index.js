@@ -5,7 +5,7 @@ import Button from "../../components/Button"
 import ContainerItems from "../../components/ContainerItems"
 import Title from "../../components/Title"
 
-import { InputSearch } from "./styles"
+import { Wrapped, InputSearch } from "./styles"
 
 
 function App() {
@@ -85,53 +85,40 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <ContainerItems>
+    <Wrapped>
+      <ContainerItems searched={weatherForecast}>
+      {weatherForecast ? (
+          <>
+            <img src={weatherImg} alt="icone-do-clima-atual" />
+              <p className="mainInfo">{weatherForecast.city.name}, {weatherForecast.city.country}</p>
+              <p className="mainInfo">{searchDate}</p>
+              <p className="mainInfo">{weatherForecast.list[0].weather[0].description}</p>
+              <p className="mainTemp">{weatherForecast.list[0].main.temp.toFixed(0)} ºC</p>
+              <p className="complementaryInfo">Máxima {maxTemperature.toFixed(0)}ºC</p>
+              <p className="complementaryInfo">Mínima {minTemperature.toFixed(0)}ºC</p>
+              <p className="complementaryInfo">Umidade {weatherForecast.list[0].main.humidity}%</p>
+              <p className="complementaryInfo">Nuvens no Céu {weatherForecast.list[0].clouds.all}%</p>
+              <p className="complementaryInfo">Nascer do Sol: {sunriseDate} | Pôr do Sol: {sunsetDate}</p>
+          </>
+        ) : null}
+        {error === 1 ? (
+          <p class="error">Digite uma cidade válida!</p>
+        ) : null}
+        {error === 2 ? (
+          <p class="error">Previsão não disponível, tente mais tarde!</p>
+        ) : null}
         <Title>Previsão do Tempo</Title>
           <InputSearch
             ref={inputCity}
             type="text"
-            autocomplete="on"
             autoFocus
-            required
             placeholder="Insira a cidade desejada">
           </InputSearch>
           <Button
-            type="submit"
             onClick={weatherSearch}>Pesquisar
           </Button>
-        {weatherForecast ? (
-          <>
-            <img src={weatherImg} alt="icone-do-clima-atual" />
-            <ul>
-              <li>{weatherForecast.city.name}, {weatherForecast.city.country}</li>
-              <li>.</li>
-              <li>{searchDate}</li>
-              <li>.</li>
-              <li>Temperatura Atual: {weatherForecast.list[0].main.temp} ºC</li>
-              <li>Sensação Térmica: {weatherForecast.list[0].main.feels_like} ºC</li>
-              <li>.</li>
-              <li>Condições Atuais: {weatherForecast.list[0].weather[0].description}</li>
-              <li>Nuvens no Céu: {weatherForecast.list[0].clouds.all}%</li>
-              <li>Umidade {weatherForecast.list[0].main.humidity}%</li>
-              <li>Pressão Atmosférica {weatherForecast.list[0].main.pressure} hPa</li>
-              <li>.</li>
-              <li>Máxima nas próximas 24 horas: {maxTemperature}ºC</li>
-              <li>Mínima nas próximas 24 horas: {minTemperature}ºC</li>
-              <li>.</li>
-              <li>Nascer do Sol: {sunriseDate}</li>
-              <li>Pôr do Sol: {sunsetDate}</li>
-            </ul>
-          </>
-        ) : null}
-        {error === 1 ? (
-          <p>Digite uma cidade válida!</p>
-        ) : null}
-        {error === 2 ? (
-          <p>Previsão não disponível, tente mais tarde!</p>
-        ) : null}
       </ContainerItems>
-    </div>
+    </Wrapped>
   );
 }
 

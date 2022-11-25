@@ -5,7 +5,7 @@ Uma aplicação front-end, desenvolvido em React JS, que através de uma API Res
 ![Screenshot 2022-11-25 164934](https://user-images.githubusercontent.com/113479357/204049531-b6d7fc5e-fd0a-4519-bbc5-d9280facfa8b.png)
 # 🚀 Tecnologias:
  
-Foram utilizadas com as seguintes tecnologias, ferramentas e bibliotecas:
+Foram utilizadas as seguintes tecnologias, ferramentas e bibliotecas:
 
 - Javascript
 - React
@@ -16,7 +16,6 @@ Foram utilizadas com as seguintes tecnologias, ferramentas e bibliotecas:
 - Hook state
 - Hook ref
 - Axios
-#
 #
 # 💻 Funcionalidades:
 
@@ -29,10 +28,8 @@ Foram utilizadas com as seguintes tecnologias, ferramentas e bibliotecas:
 - Condições das nuvens.
 - Horário do nascer do sol e do por do sol.
 #
-#
 # 😎 Deploy:
 - [spa-weather-forecast](https://spa-weather-forecast-mrgt.netlify.app/).
-#
 #
 Esse projeto foi criado com  Create React App, para compilar e instalar esse projeto siga as instruções abaixo.
 

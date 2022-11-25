@@ -1,5 +1,11 @@
-import { useState, useRef } from "react"
+import React, { useState, useRef } from "react"
 import axios from "axios"
+
+import Button from "../../components/Button"
+import ContainerItems from "../../components/ContainerItems"
+import Title from "../../components/Title"
+
+import { InputSearch } from "./styles"
 
 
 function App() {
@@ -70,13 +76,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Previsão do Tempo</h1>
-      <div>
-        <input ref={inputCity} placeholder="Insira a cidade desejada"></input>
-        <button onClick={weatherSearch}>Pesquisar</button>
-      </div>
+      <ContainerItems>
+        <Title>Previsão do Tempo</Title>
+        <InputSearch ref={inputCity} placeholder="Insira a cidade desejada"></InputSearch>
+        <Button onClick={weatherSearch}>Pesquisar</Button>
+      </ContainerItems>
       {weatherForecast ? (
-        <div>
+        <ContainerItems>
           <img src={weatherImg} alt="icone-do-clima-atual" />
           <ul>
             <li>{weatherForecast.city.name}, {weatherForecast.city.country}</li>
@@ -97,7 +103,7 @@ function App() {
             <li>Nascer do Sol: {sunriseDate}</li>
             <li>Pôr do Sol: {sunsetDate}</li>
           </ul>
-        </div>
+        </ContainerItems>
       ) : null}
     </div>
   );

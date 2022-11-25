@@ -19,7 +19,7 @@ Foram utilizadas as seguintes tecnologias, ferramentas e bibliotecas:
 #
 # 💻 Funcionalidades:
 
-- Consulta em tempo real da previsão do tempo para a cidade desejada. Retornando:
+Consulta em tempo real da previsão do tempo para a cidade desejada. Retornando:
 
 - Temperatura atual.
 - Data e cidade da consulta.
@@ -37,22 +37,22 @@ Esse projeto foi criado com  Create React App, para compilar e instalar esse pro
 
 No diretório do projeto, você pode executar para instalar os pacotes de depencias:
 
-## `yarn`
+# `yarn`
 
 No diretório do projeto, você pode executar para instalar os pacotes de depencias:
 
-## `yarn start`
+# `yarn start`
 
 O aplitcativo iniciará no modo de desenvolvimento, no seu navegador, no endereço [http://localhost:3000](http://localhost:3000).
 Caso isso não ocorra, você pode abri-lo digitando diretamente no seu navegador.
 
 A página será recarregada quando você salvar o arquivo após alguma alteração.
 
-## `yarn test`
+# `yarn test`
 
 Inicia o executor de teste, você será guiado pelas opções disponíveis via terminal.
 
-## `yarnd build`
+# `yarnd build`
 
 Compila o aplicativo para produção na pasta `build`.\
 Ele agrupa corretamente os arquivos no modo de produção e otimiza a compilação para o melhor desempenho.

@@ -1,4 +1,4 @@
-# Web App Para Previsão do Tempo - Aplicação Frontend com Consumo de API Rest
+# Web App Para Previsão do Tempo com consumo de API Rest
 
 Uma aplicação front-end, desenvolvido em React JS, que através de uma API Rest ([OpenWeatherMap](http://openweathermap.org/)) consulta a previsão do tempo para a cidade desejada.
 #

@@ -35,11 +35,9 @@ Esse projeto foi criado com  Create React App, para compilar e instalar esse pro
 
 # Scripts Disponíveis
 
-No diretório do projeto, você pode executar para instalar os pacotes de depencias:
-
 # `yarn`
 
-No diretório do projeto, você pode executar para instalar os pacotes de depencias:
+No diretório do projeto, você pode executar para instalar os pacotes de depencias.
 
 # `yarn start`
 

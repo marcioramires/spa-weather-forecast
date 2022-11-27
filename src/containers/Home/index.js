@@ -107,7 +107,7 @@ function App() {
         {error === 2 ? (
           <p class="error">Previsão não disponível, tente mais tarde!</p>
         ) : null}
-        <Title>Previsão do Tempo</Title>
+        <Title searched={weatherForecast}>Previsão do Tempo</Title>
           <InputSearch
             ref={inputCity}
             type="text"

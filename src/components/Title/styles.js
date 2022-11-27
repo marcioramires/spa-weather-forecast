@@ -8,7 +8,7 @@ export const H1 = styled.h1`
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
-    margin-top: 40px;
+    margin-top: ${props => props.searched ? '100px' : '0px'};
 
     text-shadow: -1.85429px 2.78143px 0.927143px rgba(0, 0, 0, 0.1);
 `
